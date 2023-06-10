@@ -1,2 +1,2 @@
-# ReactJS
-Find ReactJS important concepts and code here.
+# DSA
+Code for DSA problems solved across multiple platforms
