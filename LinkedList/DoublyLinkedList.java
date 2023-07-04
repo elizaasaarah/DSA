@@ -1,8 +1,6 @@
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public class DoublyLinkedList {
-    DoublyLinkedList() {
-        head = null;
-    }
-    
     Node head;
     class Node {
         int val;
@@ -18,7 +16,7 @@ public class DoublyLinkedList {
             this.prev = prev;
         }
     }
-    
+
     private int getLength() {
         Node curr = head;
         int length = 0;
@@ -33,7 +31,7 @@ public class DoublyLinkedList {
 
     public void addAtHead(int val) {
         Node newNode = new Node(val, head, null);
-        
+
         if(head != null) {
             head.prev = newNode;
         }
@@ -131,5 +129,14 @@ public class DoublyLinkedList {
         if(next != null) {
             next.prev = prev;
         }
+    }
+    public static void main(String[] args) {
+        DoublyLinkedList dll = new DoublyLinkedList();
+        dll.addAtHead(1);
+        dll.addAtTail(3);
+        dll.addAtIndex(1,2);
+        System.out.println(dll.get(1));
+        dll.deleteAtIndex(1);
+        System.out.println(dll.get(1));
     }
 }
